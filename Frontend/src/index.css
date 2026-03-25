@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    background-color: #0a0a0f;
+    color: #e8e8f0;
+  }
+}
+
+/* Keyframes */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -800px 0; }
+  100% { background-position:  800px 0; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Custom classes */
+.animate-slide-in {
+  animation: slideIn 0.3s ease;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #111a1a 25%, #1a2a2a 50%, #111a1a 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 13px;
+  background: #34d399;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+}
+
+/* React Flow overrides */
+.react-flow__controls-button {
+  background: #12121a !important;
+  border-color: #2a2a3d !important;
+  color: #6b6b8a !important;
+}
+.react-flow__controls-button:hover {
+  background: #1a1a26 !important;
+  color: #e8e8f0 !important;
+}
+.react-flow__attribution {
+  background: rgba(10, 10, 15, 0.7) !important;
+  border-radius: 6px;
+}
+.react-flow__node {
+  cursor: default !important;
+}
+.react-flow__handle {
+  cursor: crosshair !important;
+}
+.react-flow__pane {
+  cursor: grab !important;
+}
+.react-flow__pane:active {
+  cursor: grabbing !important;
+}
