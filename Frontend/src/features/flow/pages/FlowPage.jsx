@@ -318,7 +318,7 @@ const FlowPage = () => {
           style={{ fontFamily: "'IBM Plex Mono', monospace" }}
         >
           <span className="text-violet-700">⬡</span>
-          mistral-7b-instruct · openrouter
+         gemini-3-flash-preview · google genai
         </div>
 
         {/* Toast */}
